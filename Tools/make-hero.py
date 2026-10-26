@@ -45,12 +45,12 @@ NEXT_PROMPT_AT = 7.85
 
 # The iPhone's screen (landscape, Dynamic Island on the left), in its own units.
 SW, SH = 380, 172
-FIT = (30, 0, SH / DH)                 # remote screen fit to height, island gutter on the left
+FIT = ((SW - DW * SH / DH) / 2, 0, SH / DH)  # remote screen fit to height and centred, as in the app
 # Keyboard up: zoomed in on the prompt (clamped to the screen's right edge, as the app's viewport is),
 # then panned as the output prints, keeping the cursor visible.
 ZOOM_TYPING = (SW - DW * .75, -85.5, .75)
 ZOOM_OUTPUT = (SW - DW * .75, -116.0, .75)
-DOCK_X = 326                           # Reach's dock, standing in the right gutter
+DOCK_X = 331.5                         # Reach's dock, a narrow pill just right of the remote screen
 KB_TOP = 68                            # accessory bar's top edge when the keyboard is up
 
 EASE = (.25, .1, .25, 1)
@@ -396,33 +396,43 @@ def desktop(on_phone: bool) -> str:
 
 
 def phone_screen() -> str:
-    out = [f'<rect width="{SW}" height="{SH}" fill="#000"/>', f'<g {anim("viewport")}>{desktop(on_phone=True)}</g>']
+    out = [f'<rect width="{SW}" height="{SH}" fill="#000"/>', f'<g {anim("viewport")}><g clip-path="url(#desk)">{desktop(on_phone=True)}</g></g>']
 
-    # Reach's dock: a vertical glass capsule in the right gutter: Keyboard, Mode, Shortcuts, Apps, More.
-    cx, top = DOCK_X + 17, 22
-    ys = [top + 16 + i * 24 for i in range(5)]
+    # Reach's dock, measured from the app: a narrow glass pill holding Keyboard, Mode, Shortcuts,
+    # Apps and More, then a divider and the chevron that tucks it away.
+    cx, top, w, h = DOCK_X + 11.25, 23.5, 22.5, 117
+    ys = [35, 54, 73, 92.5, 112]
+    stroke = 'stroke="#fff" stroke-width=".85" stroke-linecap="round" stroke-linejoin="round"'
+    line = f'fill="none" {stroke}'
     out.append(f'<g {anim("dock")}>')
-    out.append(f'<rect x="{DOCK_X}" y="{top}" width="34" height="128" rx="17" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".22" stroke-width=".8"/>')
-    out.append(f'<g {anim("kbActive")}><circle cx="{cx}" cy="{ys[0]}" r="11" fill="{ACCENT}" fill-opacity=".25"/></g>')
+    out.append(f'<rect x="{DOCK_X}" y="{top}" width="{w}" height="{h}" rx="{w / 2}" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".16" stroke-width=".5"/>')
+    out.append(f'<g {anim("kbActive")}><circle cx="{cx}" cy="{ys[0]}" r="8" fill="{ACCENT}" fill-opacity=".25"/></g>')
 
     def keyboard_glyph(color):
         y = ys[0]
-        return (f'<rect x="{cx - 7}" y="{y - 4.5}" width="14" height="9" rx="2" fill="none" stroke="{color}" stroke-width="1.3"/>'
-                + "".join(f'<rect x="{cx - 5 + i * 2.6}" y="{y - 2.4}" width="1.4" height="1.4" fill="{color}"/>' for i in range(5))
-                + f'<rect x="{cx - 3.5}" y="{y + 1.4}" width="7" height="1.3" rx=".6" fill="{color}"/>')
+        keys = "".join(f'<rect x="{cx - 3.9 + i * 1.75}" y="{y - 2 + r * 1.5}" width=".9" height=".8" fill="{color}"/>'
+                       for r in (0, 1) for i in range(5))
+        return (f'<rect x="{cx - 5}" y="{y - 3.2}" width="10" height="6.4" rx="1.2" fill="none" stroke="{color}" stroke-width=".85"/>'
+                + keys + f'<rect x="{cx - 2.6}" y="{y + 1.3}" width="5.2" height=".8" fill="{color}"/>')
     out.append(keyboard_glyph("#fff") + f'<g {anim("kbActive")}>{keyboard_glyph(ACCENT)}</g>')
-    out.append(f'<rect x="{cx - 7}" y="{ys[1] - 5}" width="14" height="10" rx="2.2" fill="none" stroke="#fff" stroke-width="1.3"/>'
-               f'<path d="M{cx} {ys[1] + 5}v-3" stroke="#fff" stroke-width="1.1"/>')  # Mode: trackpad
-    out.append(text(cx, ys[2] + 4.5, "⌘", size=12, fill="#fff", anchor="middle"))  # Shortcuts
-    out.append("".join(f'<rect x="{cx - 6 + i * 7}" y="{ys[3] - 6 + j * 7}" width="5" height="5" rx="1.4" fill="#fff"/>'
+    # Mode: a hand pointing at a screen
+    y = ys[1]
+    out.append(f'<path d="M{cx - 1} {y + 2.6}H{cx - 4.4}a1.1 1.1 0 0 1-1.1-1.1V{y - 3.1}a1.1 1.1 0 0 1 1.1-1.1h6.6'
+               f'a1.1 1.1 0 0 1 1.1 1.1V{y - 1.4}" {line}/>'
+               f'<path d="M{cx - .3} {y + 4.6}l-1.4-2.4a.8.8 0 0 1 1.3-.9l.7.9V{y - 1.6}a.8.8 0 0 1 1.6 0V{y + .6}'
+               f'l2.9.5a1.2 1.2 0 0 1 1 1.4l-.5 2.6" fill="#1A1A1A" {stroke}/>')
+    out.append(text(cx, ys[2] + 3.6, "⌘", size=10.5, fill="#fff", anchor="middle"))  # Shortcuts
+    out.append("".join(f'<rect x="{cx - 3.7 + i * 4}" y="{ys[3] - 3.7 + j * 4}" width="3.4" height="3.4" rx=".9" {line}/>'
                        for i in (0, 1) for j in (0, 1)))  # Apps
-    out.append("".join(f'<circle cx="{cx - 5 + i * 5}" cy="{ys[4]}" r="1.4" fill="#fff"/>' for i in range(3)))  # More
+    out.append("".join(f'<circle cx="{cx - 3.4 + i * 3.4}" cy="{ys[4]}" r=".95" fill="#fff"/>' for i in range(3)))  # More
+    out.append(f'<path d="M{cx - 4.5} 122.5h9" stroke="#fff" stroke-opacity=".3" stroke-width=".5"/>'
+               f'<path d="M{cx - 1} 128.6l2.2 2.5-2.2 2.5" {line}/>')  # Hide
     out.append("</g>")
 
     # The finger tapping Keyboard
-    out.append(f'<g transform="translate({cx} {ys[0]})"><g {anim("finger2")}><circle r="10" fill="#fff" fill-opacity=".55"/>'
-               f'<circle r="10" fill="none" stroke="#fff" stroke-width="1.3"/></g>'
-               f'<circle r="9" fill="none" stroke="#fff" stroke-width="1.4" {anim("ripple2")}/></g>')
+    out.append(f'<g transform="translate({cx} {ys[0]})"><g {anim("finger2")}><circle r="8" fill="#fff" fill-opacity=".55"/>'
+               f'<circle r="8" fill="none" stroke="#fff" stroke-width="1.1"/></g>'
+               f'<circle r="7.5" fill="none" stroke="#fff" stroke-width="1.2" {anim("ripple2")}/></g>')
 
     # Keyboard: Reach's accessory bar on top of the (dark) iOS keyboard.
     kb = [f'<g {anim("keyboard")}>', f'<rect y="{KB_TOP}" width="{SW}" height="{SH - KB_TOP}" fill="#2B2B2E"/>',
@@ -494,6 +504,7 @@ def svg() -> str:
     <linearGradient id="glare" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".38" stop-color="#fff" stop-opacity=".025"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
     <radialGradient id="spill" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3D6BFF" stop-opacity=".35"/><stop offset="1" stop-color="#3D6BFF" stop-opacity="0"/></radialGradient>
     {icons}
+    <clipPath id="desk"><rect width="{DW}" height="{DH}"/></clipPath>
     <clipPath id="macScreen"><rect x="{mac_x}" y="{mac_y}" width="{DW}" height="{DH}" rx="9"/></clipPath>
     <clipPath id="phoneScreen"><rect x="{screen_x}" y="{screen_y}" width="{SW}" height="{SH}" rx="34"/></clipPath>
     <filter id="win" x="-20%" y="-20%" width="140%" height="150%"><feGaussianBlur stdDeviation="7"/><feOffset dy="6"/><feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer></filter>
