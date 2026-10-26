@@ -79,6 +79,10 @@ right after you add it, try again.
 - **Replay window after a restart.** Setup messages are timestamped (±5 minutes) and de-duplicated
   in memory, so a captured message could be replayed within that window after the receiving app
   restarts. It still can't complete a connection without the device's private key.
+- **No forward secrecy for setup messages.** They're encrypted with keys derived from the two
+  devices' long-term identity keys. Someone who records relay traffic and later steals one of those
+  keys could read past setup messages: network addresses, device names and TURN settings. Video and
+  input travel over WebRTC's DTLS, which has forward secrecy.
 - **One session at a time.** Connecting from a second paired iPhone ends the first session.
 - **Thin automated tests.** Most coverage is the host self-test and `reach-probe`.
 

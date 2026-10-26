@@ -9,8 +9,9 @@ Google's WebRTC (M154), as the prebuilt `WebRTC.xcframework` from
 Manager when you build (`Packages/ReachKit/Package.swift`, checksum-pinned) and is not stored in this
 repository.
 
-WebRTC is distributed under a BSD-style license with an additional patent grant, and includes
-third-party components under their own licenses. The full texts ship inside the framework
-(`WebRTC.xcframework/LICENSE`) and are published at
-<https://webrtc.googlesource.com/src/+/refs/heads/main/LICENSE>. If you distribute builds of Reach,
-include those notices with them.
+WebRTC is distributed under a BSD-style license (included in the framework as
+`WebRTC.xcframework/LICENSE`, and at <https://webrtc.googlesource.com/src/+/refs/heads/main/LICENSE>)
+with an additional patent grant (<https://webrtc.googlesource.com/src/+/refs/heads/main/PATENTS>).
+It also contains third-party components under their own licenses, which are listed in the WebRTC
+source tree rather than in the framework. If you distribute builds of Reach, include all of these
+notices with them.
