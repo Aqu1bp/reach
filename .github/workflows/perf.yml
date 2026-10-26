@@ -1,0 +1,150 @@
+name: perf
+
+# Before/after video latency bench (reach-probe bench: host + client in one process) plus a compile
+# check of both apps and the host self-test. macOS minutes are expensive: keep this lean.
+
+# Manual only: a run is ~8 macOS runner minutes, billed at 10x.
+on:
+  workflow_dispatch:
+    inputs:
+      cycles:
+        description: "Idle + scroll-burst cycles per run"
+        required: false
+        default: "4"
+        type: string
+      size:
+        description: "Synthetic screen size WxH"
+        required: false
+        default: "1512x982"
+        type: string
+      fps:
+        description: "Push rate during motion (30 on CI; see the bench step)"
+        required: false
+        default: "30"
+        type: string
+      baseline_env:
+        description: "Baseline settings, NAME=value|NAME=value (empty: current defaults)"
+        required: false
+        default: ""
+        type: string
+      candidate_env:
+        description: "Candidate settings, NAME=value|NAME=value (empty: current defaults)"
+        required: false
+        default: ""
+        type: string
+      build_apps:
+        description: "Also build both apps and run the host self-test"
+        required: false
+        default: true
+        type: boolean
+
+concurrency:
+  group: perf-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  bench:
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        id: xcode
+        run: |
+          set -euo pipefail
+          # Newest installed release Xcode (the apps use iOS 26 SDK APIs); fall back to the default.
+          pick=$(ls -d /Applications/Xcode_*.app 2>/dev/null | grep -vi beta | sort -V | tail -n 1 || true)
+          if [[ -n "$pick" ]]; then sudo xcode-select -s "$pick/Contents/Developer"; fi
+          xcodebuild -version
+          sw_vers
+          swift --version
+          echo "version=$(xcodebuild -version | head -n 1 | tr -c 'A-Za-z0-9.\n' '-')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache SwiftPM build
+        uses: actions/cache@v4
+        with:
+          path: Packages/ReachKit/.build
+          key: reachkit-${{ runner.arch }}-${{ steps.xcode.outputs.version }}-${{ hashFiles('Packages/ReachKit/Package.swift', 'Packages/ReachKit/Package.resolved') }}
+          restore-keys: |
+            reachkit-${{ runner.arch }}-${{ steps.xcode.outputs.version }}-
+
+      - name: Build reach-probe
+        working-directory: Packages/ReachKit
+        run: swift build -c release --product reach-probe
+
+      # Four scenarios (lan: uncapped, wifi: 2 Mbit/s cap, heavy: uncapped jump-cut content, stress:
+      # uncapped at 60 fps), each baseline + candidate. 30 fps by default: the macos-15 VM encodes
+      # 1512x982 HEVC at ~15-20 ms per frame, so 60 fps pushes saturate the encoder; the stress scenario
+      # runs at 60 fps on purpose to show the sender under that overload. The 2 Mbit/s cap is below
+      # what scrolling text needs at 30 fps (~3 Mbit/s), so "wifi" is actually constrained.
+      - name: Bench (baseline vs candidate, lan + wifi + heavy + stress)
+        env:
+          CYCLES: ${{ inputs.cycles || '4' }}
+          SIZE: ${{ inputs.size || '1512x982' }}
+          FPS: ${{ inputs.fps || '30' }}
+          BENCH_BASELINE_ENV: ${{ inputs.baseline_env }}
+          BENCH_CANDIDATE_ENV: ${{ inputs.candidate_env }}
+        run: bash Tools/bench.sh bench-out --no-build --cycles "$CYCLES" --size "$SIZE" --fps "$FPS"
+
+      - name: Upload bench results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bench-out
+          path: bench-out
+          if-no-files-found: warn
+          retention-days: 14
+
+  apps:
+    if: inputs.build_apps
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        id: xcode
+        run: |
+          set -euo pipefail
+          pick=$(ls -d /Applications/Xcode_*.app 2>/dev/null | grep -vi beta | sort -V | tail -n 1 || true)
+          if [[ -n "$pick" ]]; then sudo xcode-select -s "$pick/Contents/Developer"; fi
+          xcodebuild -version
+          sw_vers
+          echo "version=$(xcodebuild -version | head -n 1 | tr -c 'A-Za-z0-9.\n' '-')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Swift packages
+        uses: actions/cache@v4
+        with:
+          path: build/SourcePackages
+          key: spm-${{ runner.arch }}-${{ steps.xcode.outputs.version }}-${{ hashFiles('Packages/ReachKit/Package.swift', 'Packages/ReachKit/Package.resolved') }}
+
+      # The project has no shared schemes, so build targets directly. `-target` builds refuse
+      # -derivedDataPath; SYMROOT puts the products under build/ instead.
+      - name: Build Reach Host (macOS)
+        run: |
+          set -o pipefail
+          xcodebuild -project Reach.xcodeproj -target ReachHost -configuration Debug \
+            -clonedSourcePackagesDirPath build/SourcePackages SYMROOT="$PWD/build/Products" \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= build
+
+      - name: Host self-test
+        run: |
+          set -euo pipefail
+          bin="build/Products/Debug/Reach Host.app/Contents/MacOS/Reach Host"
+          if [[ ! -x "$bin" ]]; then
+            bin=$(find build -path "*Reach Host.app/Contents/MacOS/Reach Host" -type f | head -n 1)
+          fi
+          if [[ -z "$bin" ]]; then echo "Reach Host binary not found under build/"; exit 1; fi
+          echo "running $bin --self-test"
+          "$bin" --self-test
+
+      - name: Build Reach (iOS Simulator)
+        run: |
+          set -o pipefail
+          xcodebuild -project Reach.xcodeproj -target Reach -sdk iphonesimulator -configuration Debug \
+            -clonedSourcePackagesDirPath build/SourcePackages SYMROOT="$PWD/build/Products" \
+            ONLY_ACTIVE_ARCH=YES ARCHS=arm64 CODE_SIGNING_ALLOWED=NO build

@@ -1,0 +1,9 @@
+// Signing and bundle identifiers for both apps (applied through project.yml).
+//
+// To build with your own Apple developer team, copy Local.xcconfig.example to Local.xcconfig
+// (git-ignored) and set your team ID and a bundle identifier prefix you own there.
+
+REACH_BUNDLE_ID_PREFIX = io.github.aqu1bp.reach
+DEVELOPMENT_TEAM =
+
+#include? "Local.xcconfig"

@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26DA3ABD00CA45B357D48E45 /* ReachProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = AAC1505069AC77A5E5149EDA /* ReachProtocol */; };
+		8581DCEA6A70E4DFEB27EC36 /* ReachProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7BAF5290A4FDFE11F39218 /* ReachProtocol */; };
+		D59B9EDEEF87435A9437DAD9 /* ReachCore in Frameworks */ = {isa = PBXBuildFile; productRef = E0EA0FC5C26812CAEC1B8A1B /* ReachCore */; };
+		F195107E5301701DC18433D5 /* ReachCore in Frameworks */ = {isa = PBXBuildFile; productRef = 374F25829E88AB4ED61DAED7 /* ReachCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C1F0A7E9B2D4C6E8A0B1D2F /* Reach.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Reach.xcconfig; sourceTree = "<group>"; };
+		E7EF85CCF41449546A5CDA16 /* Reach.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Reach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2790C228788F99B08B5C65 /* ReachKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ReachKit; path = Packages/ReachKit; sourceTree = SOURCE_ROOT; };
+		FB64A472082D340D97C950B6 /* ReachHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReachHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		56879C1D497893F279FF4C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C5BA20F20615BD5317C96D5F /* Reach */;
+		};
+		720F7D90EAE0AB6D50A4ED00 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 18DA45A77B6F619DD9B73A98 /* ReachHost */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9DCE0DCC3E57E3DEB8BBC2C7 /* ReachiOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				56879C1D497893F279FF4C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			name = ReachiOS;
+			path = ReachiOS;
+			sourceTree = "<group>";
+		};
+		DA46CFB4B5E7ECFB25B71619 /* ReachHost */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				720F7D90EAE0AB6D50A4ED00 /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			name = ReachHost;
+			path = ReachHost;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E62CF81182CD0EDF1CB5F1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D59B9EDEEF87435A9437DAD9 /* ReachCore in Frameworks */,
+				26DA3ABD00CA45B357D48E45 /* ReachProtocol in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C9745A1DBB9770E69E05ED0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F195107E5301701DC18433D5 /* ReachCore in Frameworks */,
+				8581DCEA6A70E4DFEB27EC36 /* ReachProtocol in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A2E4C6F8B1D3E5A9C0B2D4F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3C1F0A7E9B2D4C6E8A0B1D2F /* Reach.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0A64B0FA964ACBCA046C28FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7EF85CCF41449546A5CDA16 /* Reach.app */,
+				FB64A472082D340D97C950B6 /* ReachHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89961918774A071DA3C0E0C3 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EC2790C228788F99B08B5C65 /* ReachKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		8F219E886BC57F5131D01642 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				DA46CFB4B5E7ECFB25B71619 /* ReachHost */,
+				9DCE0DCC3E57E3DEB8BBC2C7 /* ReachiOS */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		E1A390AC27DAF82E3A451D03 = {
+			isa = PBXGroup;
+			children = (
+				8F219E886BC57F5131D01642 /* Apps */,
+				7A2E4C6F8B1D3E5A9C0B2D4F /* Config */,
+				89961918774A071DA3C0E0C3 /* Packages */,
+				0A64B0FA964ACBCA046C28FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18DA45A77B6F619DD9B73A98 /* ReachHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F871D0CC224115FB633A8C3 /* Build configuration list for PBXNativeTarget "ReachHost" */;
+			buildPhases = (
+				45B212FDABB163146BC24C63 /* Sources */,
+				47D3D69BA34249DB3DE6EFCE /* Resources */,
+				3E62CF81182CD0EDF1CB5F1C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DA46CFB4B5E7ECFB25B71619 /* ReachHost */,
+			);
+			name = ReachHost;
+			packageProductDependencies = (
+				E0EA0FC5C26812CAEC1B8A1B /* ReachCore */,
+				AAC1505069AC77A5E5149EDA /* ReachProtocol */,
+			);
+			productName = ReachHost;
+			productReference = FB64A472082D340D97C950B6 /* ReachHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5BA20F20615BD5317C96D5F /* Reach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F204AA176B1B6B59BB2E33A /* Build configuration list for PBXNativeTarget "Reach" */;
+			buildPhases = (
+				ED89885A73BE790E86DC9D22 /* Sources */,
+				6180C9F50C7A799895E4A51F /* Resources */,
+				4C9745A1DBB9770E69E05ED0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9DCE0DCC3E57E3DEB8BBC2C7 /* ReachiOS */,
+			);
+			name = Reach;
+			packageProductDependencies = (
+				374F25829E88AB4ED61DAED7 /* ReachCore */,
+				5B7BAF5290A4FDFE11F39218 /* ReachProtocol */,
+			);
+			productName = Reach;
+			productReference = E7EF85CCF41449546A5CDA16 /* Reach.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3109AF0DC53CE8985EA1AC8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					18DA45A77B6F619DD9B73A98 = {
+						ProvisioningStyle = Automatic;
+					};
+					C5BA20F20615BD5317C96D5F = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F2B0D2D08F6B4F43B104FBCD /* Build configuration list for PBXProject "Reach" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E1A390AC27DAF82E3A451D03;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7FE864972F4589F95BB3C87F /* XCLocalSwiftPackageReference "Packages/ReachKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0A64B0FA964ACBCA046C28FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18DA45A77B6F619DD9B73A98 /* ReachHost */,
+				C5BA20F20615BD5317C96D5F /* Reach */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47D3D69BA34249DB3DE6EFCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6180C9F50C7A799895E4A51F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45B212FDABB163146BC24C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED89885A73BE790E86DC9D22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		518474C716BB2153F733C713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Apps/ReachiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(REACH_BUNDLE_ID_PREFIX)";
+				PRODUCT_NAME = Reach;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5749D97096E90008E8D8E6BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Apps/ReachiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(REACH_BUNDLE_ID_PREFIX)";
+				PRODUCT_NAME = Reach;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59AC623714FE38B80BBE1A9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C1F0A7E9B2D4C6E8A0B1D2F /* Reach.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C1E4270FF27263D02E10A102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Apps/ReachHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(REACH_BUNDLE_ID_PREFIX).host";
+				PRODUCT_NAME = "Reach Host";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C58A297AE0BE3DB949A6520B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C1F0A7E9B2D4C6E8A0B1D2F /* Reach.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C6D7EB97229F1EC677EC7084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Apps/ReachHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(REACH_BUNDLE_ID_PREFIX).host";
+				PRODUCT_NAME = "Reach Host";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F204AA176B1B6B59BB2E33A /* Build configuration list for PBXNativeTarget "Reach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5749D97096E90008E8D8E6BC /* Debug */,
+				518474C716BB2153F733C713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9F871D0CC224115FB633A8C3 /* Build configuration list for PBXNativeTarget "ReachHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1E4270FF27263D02E10A102 /* Debug */,
+				C6D7EB97229F1EC677EC7084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F2B0D2D08F6B4F43B104FBCD /* Build configuration list for PBXProject "Reach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59AC623714FE38B80BBE1A9F /* Debug */,
+				C58A297AE0BE3DB949A6520B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		7FE864972F4589F95BB3C87F /* XCLocalSwiftPackageReference "Packages/ReachKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ReachKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		374F25829E88AB4ED61DAED7 /* ReachCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ReachCore;
+		};
+		5B7BAF5290A4FDFE11F39218 /* ReachProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ReachProtocol;
+		};
+		AAC1505069AC77A5E5149EDA /* ReachProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ReachProtocol;
+		};
+		E0EA0FC5C26812CAEC1B8A1B /* ReachCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ReachCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3109AF0DC53CE8985EA1AC8A /* Project object */;
+}

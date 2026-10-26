@@ -1,0 +1,2 @@
+# gitleaks false positive: a Swift property declaration in Identity.swift, not a secret.
+Packages/ReachKit/Sources/ReachCore/Identity.swift:generic-api-key:20

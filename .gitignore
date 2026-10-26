@@ -1,0 +1,28 @@
+.DS_Store
+build/
+DerivedData/
+.build/
+.swiftpm/
+*.xcuserstate
+xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+Packages/ReachKit/.build/
+.reach-probe/
+*.xcodeproj/xcuserdata/
+
+# Personal signing overrides (see Config/Local.xcconfig.example)
+Config/Local.xcconfig
+
+# Generated output
+bench-out/
+snapshots/
+*.log
+
+# Secrets and signing material
+.env
+.env.*
+*.p12
+*.mobileprovision
+*.provisionprofile
+*.cer
+*.pem

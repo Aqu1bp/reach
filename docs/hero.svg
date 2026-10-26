@@ -1,0 +1,541 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img"
+  aria-label="An iPhone in front of a Mac. A finger drags on the iPhone and the Mac's pointer follows; a tap brings Terminal forward; the iPhone's keyboard comes up and git push types out on both screens.">
+  <style>
+    /* Reduced motion: a still of the finished push. */
+    .pointer { transform: translate(442.00px, 128.00px); }
+    .finger { opacity: 0.000; }
+    .ripple { transform: scale(2.2000); opacity: 0.000; }
+    .finger2 { opacity: 0.000; }
+    .ripple2 { transform: scale(2.2000); opacity: 0.000; }
+    .front { opacity: 1.000; }
+    .termMenu { opacity: 1.000; }
+    .notesMenu { opacity: 0.000; }
+    .notesActive { opacity: 0.000; }
+    .kbActive { opacity: 0.000; }
+    .dock { opacity: 0.000; }
+    .keyboard { transform: translate(0.00px, 120.00px); }
+    .viewport { transform: translate(30.00px, 0.00px) scale(0.4778); }
+    .ch0 { fill: #E6E6E6; }
+    .key0 { opacity: 0.000; }
+    .ch1 { fill: #E6E6E6; }
+    .key1 { opacity: 0.000; }
+    .ch2 { fill: #E6E6E6; }
+    .key2 { opacity: 0.000; }
+    .ch3 { fill: #E6E6E6; }
+    .key3 { opacity: 0.000; }
+    .ch4 { fill: #E6E6E6; }
+    .key4 { opacity: 0.000; }
+    .ch5 { fill: #E6E6E6; }
+    .key5 { opacity: 0.000; }
+    .ch6 { fill: #E6E6E6; }
+    .key6 { opacity: 0.000; }
+    .ch7 { fill: #E6E6E6; }
+    .key7 { opacity: 0.000; }
+    .keyReturn { opacity: 0.000; }
+    .out0 { opacity: 1.000; }
+    .out1 { opacity: 1.000; }
+    .out2 { opacity: 1.000; }
+    .out3 { opacity: 1.000; }
+    .nextPrompt { opacity: 1.000; }
+    .caret { fill: #E6E6E6; }
+    @media (prefers-reduced-motion: no-preference) {
+      .pointer { animation: pointer 12s cubic-bezier(0, 0, 1, 1) infinite; }
+      .finger { animation: finger 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ripple { animation: ripple 12s cubic-bezier(0, 0, 0.58, 1) infinite; }
+      .finger2 { animation: finger2 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ripple2 { animation: ripple2 12s cubic-bezier(0, 0, 0.58, 1) infinite; }
+      .front { animation: front 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .termMenu { animation: termMenu 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .notesMenu { animation: notesMenu 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .notesActive { animation: notesActive 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .kbActive { animation: kbActive 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .dock { animation: dock 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .keyboard { animation: keyboard 12s cubic-bezier(0.2, 0.8, 0.2, 1) infinite; }
+      .viewport { animation: viewport 12s cubic-bezier(0.2, 0.8, 0.2, 1) infinite; }
+      .ch0 { animation: ch0 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .key0 { animation: key0 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ch1 { animation: ch1 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .key1 { animation: key1 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ch2 { animation: ch2 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .key2 { animation: key2 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ch3 { animation: ch3 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .key3 { animation: key3 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ch4 { animation: ch4 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .key4 { animation: key4 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ch5 { animation: ch5 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .key5 { animation: key5 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ch6 { animation: ch6 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .key6 { animation: key6 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .ch7 { animation: ch7 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .key7 { animation: key7 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .keyReturn { animation: keyReturn 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .out0 { animation: out0 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .out1 { animation: out1 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .out2 { animation: out2 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .out3 { animation: out3 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .nextPrompt { animation: nextPrompt 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; }
+      .caret { animation: caret 12s steps(1, end) infinite; }
+    }
+    @keyframes pointer {
+      0.000% { transform: translate(156.00px, 262.00px); }
+      6.667% { transform: translate(156.00px, 262.00px); }
+      7.976% { transform: translate(156.33px, 261.62px); }
+      9.286% { transform: translate(158.66px, 258.99px); }
+      10.595% { transform: translate(165.03px, 251.97px); }
+      11.905% { transform: translate(177.69px, 238.85px); }
+      13.214% { transform: translate(199.33px, 218.83px); }
+      14.524% { transform: translate(233.33px, 192.66px); }
+      15.833% { transform: translate(284.26px, 163.54px); }
+      17.143% { transform: translate(339.23px, 143.05px); }
+      18.452% { transform: translate(381.10px, 133.67px); }
+      19.762% { transform: translate(410.33px, 129.86px); }
+      21.071% { transform: translate(428.51px, 128.52px); }
+      22.381% { transform: translate(437.99px, 128.11px); }
+      23.690% { transform: translate(441.50px, 128.01px); }
+      25.000% { transform: translate(442.00px, 128.00px); }
+      93.750% { transform: translate(442.00px, 128.00px); }
+      94.722% { transform: translate(436.22px, 129.44px); }
+      95.694% { transform: translate(396.25px, 140.63px); }
+      96.667% { transform: translate(292.30px, 180.70px); }
+      97.639% { transform: translate(194.99px, 234.93px); }
+      98.611% { transform: translate(160.81px, 258.48px); }
+      99.583% { transform: translate(156.00px, 262.00px); }
+      100.000% { transform: translate(156.00px, 262.00px); }
+    }
+    @keyframes finger {
+      0.000% { opacity: 0.000; }
+      3.750% { opacity: 0.000; }
+      6.250% { opacity: 1.000; }
+      27.500% { opacity: 1.000; }
+      30.000% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ripple {
+      0.000% { transform: scale(0.5000); opacity: 0.000; }
+      26.500% { transform: scale(0.5000); opacity: 0.000; }
+      26.833% { transform: scale(0.6000); opacity: 1.000; }
+      30.000% { transform: scale(2.2000); opacity: 0.000; }
+      100.000% { transform: scale(2.2000); opacity: 0.000; }
+    }
+    @keyframes finger2 {
+      0.000% { opacity: 0.000; }
+      31.250% { opacity: 0.000; }
+      32.917% { opacity: 1.000; }
+      35.833% { opacity: 1.000; }
+      37.500% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ripple2 {
+      0.000% { transform: scale(0.5000); opacity: 0.000; }
+      34.333% { transform: scale(0.5000); opacity: 0.000; }
+      34.667% { transform: scale(0.6000); opacity: 1.000; }
+      37.500% { transform: scale(2.2000); opacity: 0.000; }
+      100.000% { transform: scale(2.2000); opacity: 0.000; }
+    }
+    @keyframes front {
+      0.000% { opacity: 0.000; }
+      26.833% { opacity: 0.000; }
+      27.667% { opacity: 1.000; }
+      94.167% { opacity: 1.000; }
+      95.000% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes termMenu {
+      0.000% { opacity: 0.000; }
+      27.000% { opacity: 0.000; }
+      27.333% { opacity: 1.000; }
+      95.417% { opacity: 1.000; }
+      95.750% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes notesMenu {
+      0.000% { opacity: 1.000; }
+      27.000% { opacity: 1.000; }
+      27.500% { opacity: 0.000; }
+      95.417% { opacity: 0.000; }
+      95.917% { opacity: 1.000; }
+      100.000% { opacity: 1.000; }
+    }
+    @keyframes notesActive {
+      0.000% { opacity: 1.000; }
+      26.833% { opacity: 1.000; }
+      27.333% { opacity: 0.000; }
+      95.833% { opacity: 0.000; }
+      96.333% { opacity: 1.000; }
+      100.000% { opacity: 1.000; }
+    }
+    @keyframes kbActive {
+      0.000% { opacity: 0.000; }
+      34.667% { opacity: 0.000; }
+      35.333% { opacity: 1.000; }
+      91.667% { opacity: 1.000; }
+      92.333% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes dock {
+      0.000% { opacity: 1.000; }
+      35.833% { opacity: 1.000; }
+      37.917% { opacity: 0.000; }
+      93.750% { opacity: 0.000; }
+      95.833% { opacity: 1.000; }
+      100.000% { opacity: 1.000; }
+    }
+    @keyframes keyboard {
+      0.000% { transform: translate(0.00px, 120.00px); }
+      35.417% { transform: translate(0.00px, 120.00px); }
+      39.333% { transform: translate(0.00px, 0.00px); }
+      91.667% { transform: translate(0.00px, 0.00px); }
+      95.000% { transform: translate(0.00px, 120.00px); }
+      100.000% { transform: translate(0.00px, 120.00px); }
+    }
+    @keyframes viewport {
+      0.000% { transform: translate(30.00px, 0.00px) scale(0.4778); }
+      35.417% { transform: translate(30.00px, 0.00px) scale(0.4778); }
+      40.000% { transform: translate(-52.00px, -85.50px) scale(0.7500); }
+      56.667% { transform: translate(-52.00px, -85.50px) scale(0.7500); }
+      65.833% { transform: translate(-52.00px, -116.00px) scale(0.7500); }
+      91.667% { transform: translate(-52.00px, -116.00px) scale(0.7500); }
+      95.833% { transform: translate(30.00px, 0.00px) scale(0.4778); }
+      100.000% { transform: translate(30.00px, 0.00px) scale(0.4778); }
+    }
+    @keyframes ch0 {
+      0.000% { fill: #1E1E1E; }
+      41.667% { fill: #1E1E1E; }
+      41.917% { fill: #E6E6E6; }
+      100.000% { fill: #E6E6E6; }
+    }
+    @keyframes key0 {
+      0.000% { opacity: 0.000; }
+      41.500% { opacity: 0.000; }
+      41.667% { opacity: 1.000; }
+      42.667% { opacity: 1.000; }
+      43.333% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ch1 {
+      0.000% { fill: #1E1E1E; }
+      43.083% { fill: #1E1E1E; }
+      43.333% { fill: #E6E6E6; }
+      100.000% { fill: #E6E6E6; }
+    }
+    @keyframes key1 {
+      0.000% { opacity: 0.000; }
+      42.917% { opacity: 0.000; }
+      43.083% { opacity: 1.000; }
+      44.083% { opacity: 1.000; }
+      44.750% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ch2 {
+      0.000% { fill: #1E1E1E; }
+      44.250% { fill: #1E1E1E; }
+      44.500% { fill: #E6E6E6; }
+      100.000% { fill: #E6E6E6; }
+    }
+    @keyframes key2 {
+      0.000% { opacity: 0.000; }
+      44.083% { opacity: 0.000; }
+      44.250% { opacity: 1.000; }
+      45.250% { opacity: 1.000; }
+      45.917% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ch3 {
+      0.000% { fill: #1E1E1E; }
+      46.000% { fill: #1E1E1E; }
+      46.250% { fill: #E6E6E6; }
+      100.000% { fill: #E6E6E6; }
+    }
+    @keyframes key3 {
+      0.000% { opacity: 0.000; }
+      45.833% { opacity: 0.000; }
+      46.000% { opacity: 1.000; }
+      47.000% { opacity: 1.000; }
+      47.667% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ch4 {
+      0.000% { fill: #1E1E1E; }
+      47.500% { fill: #1E1E1E; }
+      47.750% { fill: #E6E6E6; }
+      100.000% { fill: #E6E6E6; }
+    }
+    @keyframes key4 {
+      0.000% { opacity: 0.000; }
+      47.333% { opacity: 0.000; }
+      47.500% { opacity: 1.000; }
+      48.500% { opacity: 1.000; }
+      49.167% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ch5 {
+      0.000% { fill: #1E1E1E; }
+      48.583% { fill: #1E1E1E; }
+      48.833% { fill: #E6E6E6; }
+      100.000% { fill: #E6E6E6; }
+    }
+    @keyframes key5 {
+      0.000% { opacity: 0.000; }
+      48.417% { opacity: 0.000; }
+      48.583% { opacity: 1.000; }
+      49.583% { opacity: 1.000; }
+      50.250% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ch6 {
+      0.000% { fill: #1E1E1E; }
+      50.167% { fill: #1E1E1E; }
+      50.417% { fill: #E6E6E6; }
+      100.000% { fill: #E6E6E6; }
+    }
+    @keyframes key6 {
+      0.000% { opacity: 0.000; }
+      50.000% { opacity: 0.000; }
+      50.167% { opacity: 1.000; }
+      51.167% { opacity: 1.000; }
+      51.833% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes ch7 {
+      0.000% { fill: #1E1E1E; }
+      51.417% { fill: #1E1E1E; }
+      51.667% { fill: #E6E6E6; }
+      100.000% { fill: #E6E6E6; }
+    }
+    @keyframes key7 {
+      0.000% { opacity: 0.000; }
+      51.250% { opacity: 0.000; }
+      51.417% { opacity: 1.000; }
+      52.417% { opacity: 1.000; }
+      53.083% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes keyReturn {
+      0.000% { opacity: 0.000; }
+      54.417% { opacity: 0.000; }
+      54.583% { opacity: 1.000; }
+      55.750% { opacity: 1.000; }
+      56.417% { opacity: 0.000; }
+      100.000% { opacity: 0.000; }
+    }
+    @keyframes out0 {
+      0.000% { opacity: 0.000; }
+      57.083% { opacity: 0.000; }
+      57.417% { opacity: 1.000; }
+      100.000% { opacity: 1.000; }
+    }
+    @keyframes out1 {
+      0.000% { opacity: 0.000; }
+      59.167% { opacity: 0.000; }
+      59.500% { opacity: 1.000; }
+      100.000% { opacity: 1.000; }
+    }
+    @keyframes out2 {
+      0.000% { opacity: 0.000; }
+      61.667% { opacity: 0.000; }
+      62.000% { opacity: 1.000; }
+      100.000% { opacity: 1.000; }
+    }
+    @keyframes out3 {
+      0.000% { opacity: 0.000; }
+      63.500% { opacity: 0.000; }
+      63.833% { opacity: 1.000; }
+      100.000% { opacity: 1.000; }
+    }
+    @keyframes nextPrompt {
+      0.000% { opacity: 0.000; }
+      65.417% { opacity: 0.000; }
+      65.750% { opacity: 1.000; }
+      100.000% { opacity: 1.000; }
+    }
+    @keyframes caret {
+      0.000% { fill: #1E1E1E; }
+      65.417% { fill: #E6E6E6; }
+      69.833% { fill: #1E1E1E; }
+      74.250% { fill: #E6E6E6; }
+      78.667% { fill: #1E1E1E; }
+      83.083% { fill: #E6E6E6; }
+      87.500% { fill: #1E1E1E; }
+      91.917% { fill: #E6E6E6; }
+      94.167% { fill: #1E1E1E; }
+      100.000% { fill: #1E1E1E; }
+    }
+  </style>
+  <defs>
+    <radialGradient id="studio" cx=".5" cy=".28" r=".85"><stop offset="0" stop-color="#2B3550"/><stop offset=".55" stop-color="#121725"/><stop offset="1" stop-color="#06080D"/></radialGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E121C"/><stop offset="1" stop-color="#05070B"/></linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <mask id="reflect" maskContentUnits="userSpaceOnUse"><rect x="0" y="438" width="960" height="70" fill="url(#fade)"/></mask>
+    <mask id="reflectPhone" maskContentUnits="userSpaceOnUse"><rect x="0" y="494" width="960" height="46" fill="url(#fade)"/></mask>
+    <linearGradient id="wall" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#0E1A5E"/><stop offset="1" stop-color="#1D3FA8"/></linearGradient>
+    <linearGradient id="wave1" x1="0" y1="0" x2="1" y2=".3"><stop offset="0" stop-color="#3C78FF"/><stop offset=".6" stop-color="#5B5CF6"/><stop offset="1" stop-color="#8F5BFF"/></linearGradient>
+    <linearGradient id="wave2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2CC6FF"/><stop offset=".5" stop-color="#3A8BFF"/><stop offset="1" stop-color="#6E6BFF"/></linearGradient>
+    <linearGradient id="wave3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5B4BD8" stop-opacity=".9"/><stop offset="1" stop-color="#2B5BE0" stop-opacity=".7"/></linearGradient>
+    <filter id="wallBlur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="9"/></filter>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".32"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D5DCE6"/><stop offset=".5" stop-color="#8E98AA"/><stop offset="1" stop-color="#5E687C"/></linearGradient>
+    <linearGradient id="hinge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D3038"/><stop offset="1" stop-color="#0D0E11"/></linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3F5F8"/><stop offset=".3" stop-color="#CFD5DF"/><stop offset=".75" stop-color="#9AA3B2"/><stop offset="1" stop-color="#6B7486"/></linearGradient>
+    <linearGradient id="titanium" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A8B90"/><stop offset=".18" stop-color="#4A4B50"/><stop offset=".8" stop-color="#2B2C30"/><stop offset="1" stop-color="#55565B"/></linearGradient>
+    <linearGradient id="glare" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".38" stop-color="#fff" stop-opacity=".025"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <radialGradient id="spill" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3D6BFF" stop-opacity=".35"/><stop offset="1" stop-color="#3D6BFF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="i-files" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6CC2FF"/><stop offset="1" stop-color="#1F6FE5"/></linearGradient><linearGradient id="i-web" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#58D6FF"/><stop offset="1" stop-color="#2463EB"/></linearGradient><linearGradient id="i-notes" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#ECECEF"/></linearGradient><linearGradient id="i-term" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A3A3E"/><stop offset="1" stop-color="#121214"/></linearGradient><linearGradient id="i-chat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6BF08A"/><stop offset="1" stop-color="#18B649"/></linearGradient><linearGradient id="i-music" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF7A86"/><stop offset="1" stop-color="#F22F4E"/></linearGradient><linearGradient id="i-gear" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9A9AF"/><stop offset="1" stop-color="#66666C"/></linearGradient>
+    <clipPath id="macScreen"><rect x="100" y="52" width="576" height="360" rx="9"/></clipPath>
+    <clipPath id="phoneScreen"><rect x="546" y="310" width="380" height="172" rx="34"/></clipPath>
+    <filter id="win" x="-20%" y="-20%" width="140%" height="150%"><feGaussianBlur stdDeviation="7"/><feOffset dy="6"/><feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer></filter>
+    <filter id="cursor" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity=".4"/></filter>
+    <filter id="lift" x="-20%" y="-30%" width="140%" height="180%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".6"/></filter>
+    <filter id="touch" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="soft" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+
+  <!-- Studio: seamless backdrop, floor, the screen's light on the floor -->
+  <rect width="960" height="540" rx="24" fill="url(#studio)"/>
+  <path d="M0 438H960V516a24 24 0 0 1-24 24H24a24 24 0 0 1-24-24z" fill="url(#floor)" fill-opacity=".85"/>
+  <ellipse cx="388.0" cy="452" rx="360" ry="34" fill="url(#spill)"/>
+
+  <!-- MacBook Pro -->
+  <g mask="url(#reflect)" transform="translate(0 876) scale(1 -1)">
+    <path d="M50 429h676v4.5c0 4-3.5 7-8 7H58c-4.5 0-8-3-8-7z" fill="url(#base)"/>
+    <rect x="87" y="352" width="602" height="77" fill="#0B0C0F"/>
+    <rect x="100" y="352" width="576" height="60" fill="#2F55C8"/>
+  </g>
+  <ellipse cx="388.0" cy="439" rx="340" ry="5" fill="#000" fill-opacity=".7" filter="url(#soft)"/>
+  <rect x="87" y="39" width="602" height="390" rx="20" fill="#0B0C0F" stroke="url(#edge)" stroke-width="1.8"/>
+  <rect x="88.5" y="40.5" width="599" height="387" rx="18.5" fill="none" stroke="#3A3E47" stroke-width=".7"/>
+  <g clip-path="url(#macScreen)"><g transform="translate(100 52)"><rect width="576" height="360" fill="url(#wall)"/>
+<g filter="url(#wallBlur)"><path d="M-40 120C110 50 260 190 400 112S560 30 616 64V-40H-40z" fill="url(#wave3)"/><path d="M-40 236C110 166 230 312 372 240S546 128 616 160V400H-40z" fill="url(#wave1)"/><path d="M-40 300C140 240 270 352 432 292S560 236 616 258V400H-40z" fill="url(#wave2)"/></g>
+<rect width="576" height="14" fill="#fff" fill-opacity=".2"/>
+<g class="notesMenu"><text x="12" y="10" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="start" xml:space="preserve"><tspan font-weight="700">Notes</tspan>   File   Edit   Format   View   Window</text></g>
+<g class="termMenu"><text x="12" y="10" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="start" xml:space="preserve"><tspan font-weight="700">Terminal</tspan>   Shell   Edit   View   Window</text></g>
+<text x="564" y="10" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="end" xml:space="preserve">Mon Oct 26  9:41</text>
+<rect x="430" y="4" width="14" height="7" rx="2" fill="none" stroke="#fff" stroke-opacity=".9"/><rect x="431.5" y="5.5" width="9.5" height="4" rx="1" fill="#fff"/><rect x="444.6" y="6.2" width="1.3" height="2.6" rx=".6" fill="#fff" fill-opacity=".9"/>
+<path d="M412 7a7 7 0 0 1 10 0M413.7 8.6a4.6 4.6 0 0 1 6.6 0" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/><circle cx="417" cy="10.4" r="1.1" fill="#fff"/>
+<circle cx="458" cy="6.8" r="3" fill="none" stroke="#fff" stroke-width="1.2"/><path d="M460.2 9l2.4 2.4" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+<rect x="472" y="3.4" width="9" height="3.4" rx="1.7" fill="none" stroke="#fff" stroke-width=".9"/><circle cx="478.8" cy="5.1" r="1.1" fill="#fff"/><rect x="472" y="8" width="9" height="3.4" rx="1.7" fill="none" stroke="#fff" stroke-width=".9"/><circle cx="474.2" cy="9.7" r="1.1" fill="#fff"/>
+<rect x="397" y="2.5" width="6" height="10" rx="1.6" fill="#fff"/><rect x="399" y="3.6" width="2" height=".8" rx=".4" fill="#3B6FD8"/>
+<g><rect x="262" y="116" width="300" height="178" rx="10" fill="#000" filter="url(#win)"/><rect x="262" y="116" width="300" height="178" rx="10" fill="#1E1E1E"/><path d="M262 138v-12a10 10 0 0 1 10-10h280a10 10 0 0 1 10 10v12z" fill="#323234"/><rect x="262" y="116" width="300" height="178" rx="10" fill="none" stroke="#000" stroke-opacity=".18"/><circle cx="275" cy="127" r="3.6" fill="#5F5F63"/><circle cx="286" cy="127" r="3.6" fill="#5F5F63"/><circle cx="297" cy="127" r="3.6" fill="#5F5F63"/><text x="412" y="130.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="600" fill="#86868B" text-anchor="middle" xml:space="preserve">reach — -zsh — 80×24</text><text x="274" y="154" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">Last login: Mon Oct 26 09:12 on ttys000</text><text x="274" y="168" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#E6E6E6" text-anchor="start" xml:space="preserve">alex@MacBook-Pro reach %</text></g>
+<g><rect x="34" y="40" width="286" height="206" rx="10" fill="#000" filter="url(#win)"/><rect x="34" y="40" width="286" height="206" rx="10" fill="#FFFFFF"/><path d="M34 64v-14a10 10 0 0 1 10-10h266a10 10 0 0 1 10 10v14z" fill="#F2F2F4"/><rect x="34" y="40" width="286" height="206" rx="10" fill="none" stroke="#000" stroke-opacity=".18"/><path d="M34 64h86v182h-76a10 10 0 0 1-10-10z" fill="#EDEDF0"/><circle cx="47" cy="52" r="3.6" fill="#5F5F63"/><circle cx="58" cy="52" r="3.6" fill="#5F5F63"/><circle cx="69" cy="52" r="3.6" fill="#5F5F63"/><g class="notesActive"><circle cx="47" cy="52" r="3.6" fill="#FF5F57"/><circle cx="58" cy="52" r="3.6" fill="#FEBC2E"/><circle cx="69" cy="52" r="3.6" fill="#28C840"/></g><rect x="40" y="72" width="74" height="26" rx="5" fill="#FFD52E" fill-opacity=".55"/><text x="46" y="83" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="600" fill="#1D1D1F" text-anchor="start" xml:space="preserve">Lisbon trip</text><text x="46" y="93" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6" font-weight="400" fill="#6E6E73" text-anchor="start" xml:space="preserve">Thursday evening…</text><text x="46" y="113" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="600" fill="#1D1D1F" text-anchor="start" xml:space="preserve">Groceries</text><text x="46" y="123" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6" font-weight="400" fill="#6E6E73" text-anchor="start" xml:space="preserve">Oat milk, lemons</text><text x="46" y="143" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="600" fill="#1D1D1F" text-anchor="start" xml:space="preserve">Reach ideas</text><text x="46" y="153" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6" font-weight="400" fill="#6E6E73" text-anchor="start" xml:space="preserve">Pinch to zoom</text><text x="134" y="86" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#1D1D1F" text-anchor="start" xml:space="preserve">Lisbon trip</text><text x="134" y="106" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">Thursday evening train, back Sunday.</text><text x="134" y="132" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">• Book the 18:40 from Santa Apolónia</text><text x="134" y="145" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">• Pastéis de nata in Belém</text><text x="134" y="158" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">• Sunset at Miradouro da Graça</text><text x="134" y="171" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">• Tram 28 early, before the crowds</text><text x="134" y="197" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">Ask Sam about the tile museum.</text></g>
+<g class="front"><rect x="262" y="116" width="300" height="178" rx="10" fill="#000" filter="url(#win)"/><rect x="262" y="116" width="300" height="178" rx="10" fill="#1E1E1E"/><path d="M262 138v-12a10 10 0 0 1 10-10h280a10 10 0 0 1 10 10v12z" fill="#323234"/><rect x="262" y="116" width="300" height="178" rx="10" fill="none" stroke="#000" stroke-opacity=".18"/><circle cx="275" cy="127" r="3.6" fill="#FF5F57"/><circle cx="286" cy="127" r="3.6" fill="#FEBC2E"/><circle cx="297" cy="127" r="3.6" fill="#28C840"/><text x="412" y="130.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="600" fill="#C7C7CC" text-anchor="middle" xml:space="preserve">reach — -zsh — 80×24</text><text x="274" y="154" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">Last login: Mon Oct 26 09:12 on ttys000</text><text x="274" y="168" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#E6E6E6" text-anchor="start" xml:space="preserve">alex@MacBook-Pro reach % <tspan class="ch0">g</tspan><tspan class="ch1">i</tspan><tspan class="ch2">t</tspan><tspan class="ch3"> </tspan><tspan class="ch4">p</tspan><tspan class="ch5">u</tspan><tspan class="ch6">s</tspan><tspan class="ch7">h</tspan></text><g class="out0"><text x="274" y="182" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">Enumerating objects: 5, done.</text></g><g class="out1"><text x="274" y="196" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">Writing objects: 100% (3/3), done.</text></g><g class="out2"><text x="274" y="210" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">To github.com:Aqu1bp/reach.git</text></g><g class="out3"><text x="274" y="224" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">   4f2a1c9..8be03d1  main -> main</text></g><g class="nextPrompt"><text x="274" y="238" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#E6E6E6" text-anchor="start" xml:space="preserve">alex@MacBook-Pro reach % <tspan class="caret">█</tspan></text></g></g>
+<rect x="179.0" y="320" width="218" height="34" rx="11" fill="#fff" fill-opacity=".22" stroke="#fff" stroke-opacity=".38" stroke-width=".6"/><path d="M190.0 320.6h196" stroke="#fff" stroke-opacity=".55" stroke-width=".6"/>
+<rect x="186.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="186.0" y="324" width="24" height="24" rx="6" fill="url(#i-files)"/><path d="M191.0 332h5l2 2h7v8H191.0z" fill="#fff" fill-opacity=".92"/><rect x="186.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="186.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<circle cx="198.0" cy="351.5" r="1.1" fill="#fff" fill-opacity=".85"/>
+<rect x="216.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="216.0" y="324" width="24" height="24" rx="6" fill="url(#i-web)"/><circle cx="228.0" cy="336" r="7" fill="none" stroke="#fff" stroke-width="1.4"/><ellipse cx="228.0" cy="336" rx="3" ry="7" fill="none" stroke="#fff" stroke-width="1.1"/><path d="M221.0 336h14" stroke="#fff" stroke-width="1.1"/><rect x="216.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="216.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<rect x="246.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="246.0" y="324" width="24" height="24" rx="6" fill="url(#i-notes)"/><path d="M246.0 331v-1a6 6 0 0 1 6-6h12a6 6 0 0 1 6 6v1z" fill="#FFD52E"/><path d="M251.0 335h14" stroke="#C9C9CE" stroke-width="1"/><path d="M251.0 339h14" stroke="#C9C9CE" stroke-width="1"/><path d="M251.0 343h14" stroke="#C9C9CE" stroke-width="1"/><rect x="246.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="246.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<circle cx="258.0" cy="351.5" r="1.1" fill="#fff" fill-opacity=".85"/>
+<rect x="276.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="276.0" y="324" width="24" height="24" rx="6" fill="url(#i-term)"/><path d="M282.0 332l4 3.5-4 3.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M288.0 340h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><rect x="276.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="276.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<circle cx="288.0" cy="351.5" r="1.1" fill="#fff" fill-opacity=".85"/>
+<rect x="306.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="306.0" y="324" width="24" height="24" rx="6" fill="url(#i-chat)"/><ellipse cx="318.0" cy="335.5" rx="7" ry="5.6" fill="#fff"/><path d="M313.0 339l-1.5 3.6 4.4-2.2z" fill="#fff"/><rect x="306.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="306.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<rect x="336.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="336.0" y="324" width="24" height="24" rx="6" fill="url(#i-music)"/><path d="M346.0 340.5V331.5l7-1.6v9" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><ellipse cx="344.4" cy="340.6" rx="2.2" ry="1.8" fill="#fff"/><ellipse cx="351.4" cy="339" rx="2.2" ry="1.8" fill="#fff"/><rect x="336.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="336.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<rect x="366.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="366.0" y="324" width="24" height="24" rx="6" fill="url(#i-gear)"/><circle cx="378.0" cy="336" r="6.5" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="2.2 1.9"/><circle cx="378.0" cy="336" r="4.6" fill="none" stroke="#fff" stroke-width="1.4"/><rect x="366.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="366.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<g class="pointer"><g transform="scale(.82)" filter="url(#cursor)"><path d="M0 0V17l4.3-4.1 3.1 7.2 3.2-1.4-3.1-7H13.6Z" fill="#000" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></g></g></g>
+    <rect x="100" y="52" width="576" height="360" fill="url(#glare)"/></g>
+  <path d="M354.0 52h68v6a6 6 0 0 1-6 6h-56a6 6 0 0 1-6-6z" fill="#0B0C0F"/>
+  <circle cx="388.0" cy="57.5" r="1.9" fill="#161A24"/><circle cx="387.5" cy="57" r=".6" fill="#3A4560"/>
+  <rect x="88" y="422" width="600" height="7" rx="1.5" fill="url(#hinge)"/>
+  <path d="M50 429h676v4.5c0 4-3.5 7-8 7H58c-4.5 0-8-3-8-7z" fill="url(#base)"/>
+  <path d="M51 429.6h674" stroke="#fff" stroke-opacity=".8" stroke-width=".7"/>
+  <path d="M336.0 429h104v1.8a3 3 0 0 1-3 3h-98a3 3 0 0 1-3-3z" fill="#7E8798"/>
+
+  <!-- iPhone 16 Pro, landscape, standing in front -->
+  <g mask="url(#reflectPhone)" transform="translate(0 988) scale(1 -1)">
+    <rect x="536" y="300" width="400" height="192" rx="46" fill="url(#titanium)"/>
+    <rect x="539" y="303" width="394" height="186" rx="43" fill="#08090B"/>
+  </g>
+  <ellipse cx="736.0" cy="495" rx="180.0" ry="4" fill="#000" fill-opacity=".8" filter="url(#soft)"/>
+  <g filter="url(#lift)"><rect x="536" y="300" width="400" height="192" rx="46" fill="url(#titanium)"/></g>
+  <rect x="536.6" y="300.6" width="398.8" height="190.8" rx="45.4" fill="none" stroke="#B9BAC0" stroke-opacity=".55" stroke-width=".8"/>
+  <rect x="656" y="298.4" width="44" height="3" rx="1.5" fill="#46474B"/>
+  <rect x="836" y="298.6" width="26" height="2.6" rx="1.3" fill="#46474B"/>
+  <rect x="606" y="490.6" width="16" height="3" rx="1.5" fill="#46474B"/>
+  <rect x="636" y="490.6" width="30" height="3" rx="1.5" fill="#46474B"/>
+  <rect x="676" y="490.6" width="30" height="3" rx="1.5" fill="#46474B"/>
+  <rect x="538.5" y="302.5" width="395" height="187" rx="43.5" fill="#050506"/>
+  <rect x="539.2" y="303.2" width="393.6" height="185.6" rx="42.8" fill="none" stroke="#1E2026" stroke-width=".8"/>
+  <g clip-path="url(#phoneScreen)"><g transform="translate(546 310)"><rect width="380" height="172" fill="#000"/>
+<g class="viewport"><rect width="576" height="360" fill="url(#wall)"/>
+<g filter="url(#wallBlur)"><path d="M-40 120C110 50 260 190 400 112S560 30 616 64V-40H-40z" fill="url(#wave3)"/><path d="M-40 236C110 166 230 312 372 240S546 128 616 160V400H-40z" fill="url(#wave1)"/><path d="M-40 300C140 240 270 352 432 292S560 236 616 258V400H-40z" fill="url(#wave2)"/></g>
+<rect width="576" height="14" fill="#fff" fill-opacity=".2"/>
+<g class="notesMenu"><text x="12" y="10" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="start" xml:space="preserve"><tspan font-weight="700">Notes</tspan>   File   Edit   Format   View   Window</text></g>
+<g class="termMenu"><text x="12" y="10" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="start" xml:space="preserve"><tspan font-weight="700">Terminal</tspan>   Shell   Edit   View   Window</text></g>
+<text x="564" y="10" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="end" xml:space="preserve">Mon Oct 26  9:41</text>
+<rect x="430" y="4" width="14" height="7" rx="2" fill="none" stroke="#fff" stroke-opacity=".9"/><rect x="431.5" y="5.5" width="9.5" height="4" rx="1" fill="#fff"/><rect x="444.6" y="6.2" width="1.3" height="2.6" rx=".6" fill="#fff" fill-opacity=".9"/>
+<path d="M412 7a7 7 0 0 1 10 0M413.7 8.6a4.6 4.6 0 0 1 6.6 0" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/><circle cx="417" cy="10.4" r="1.1" fill="#fff"/>
+<circle cx="458" cy="6.8" r="3" fill="none" stroke="#fff" stroke-width="1.2"/><path d="M460.2 9l2.4 2.4" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+<rect x="472" y="3.4" width="9" height="3.4" rx="1.7" fill="none" stroke="#fff" stroke-width=".9"/><circle cx="478.8" cy="5.1" r="1.1" fill="#fff"/><rect x="472" y="8" width="9" height="3.4" rx="1.7" fill="none" stroke="#fff" stroke-width=".9"/><circle cx="474.2" cy="9.7" r="1.1" fill="#fff"/>
+<rect x="397" y="2.5" width="6" height="10" rx="1.6" fill="#fff"/><rect x="399" y="3.6" width="2" height=".8" rx=".4" fill="#3B6FD8"/>
+<g><rect x="262" y="116" width="300" height="178" rx="10" fill="#000" filter="url(#win)"/><rect x="262" y="116" width="300" height="178" rx="10" fill="#1E1E1E"/><path d="M262 138v-12a10 10 0 0 1 10-10h280a10 10 0 0 1 10 10v12z" fill="#323234"/><rect x="262" y="116" width="300" height="178" rx="10" fill="none" stroke="#000" stroke-opacity=".18"/><circle cx="275" cy="127" r="3.6" fill="#5F5F63"/><circle cx="286" cy="127" r="3.6" fill="#5F5F63"/><circle cx="297" cy="127" r="3.6" fill="#5F5F63"/><text x="412" y="130.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="600" fill="#86868B" text-anchor="middle" xml:space="preserve">reach — -zsh — 80×24</text><text x="274" y="154" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">Last login: Mon Oct 26 09:12 on ttys000</text><text x="274" y="168" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#E6E6E6" text-anchor="start" xml:space="preserve">alex@MacBook-Pro reach %</text></g>
+<g><rect x="34" y="40" width="286" height="206" rx="10" fill="#000" filter="url(#win)"/><rect x="34" y="40" width="286" height="206" rx="10" fill="#FFFFFF"/><path d="M34 64v-14a10 10 0 0 1 10-10h266a10 10 0 0 1 10 10v14z" fill="#F2F2F4"/><rect x="34" y="40" width="286" height="206" rx="10" fill="none" stroke="#000" stroke-opacity=".18"/><path d="M34 64h86v182h-76a10 10 0 0 1-10-10z" fill="#EDEDF0"/><circle cx="47" cy="52" r="3.6" fill="#5F5F63"/><circle cx="58" cy="52" r="3.6" fill="#5F5F63"/><circle cx="69" cy="52" r="3.6" fill="#5F5F63"/><g class="notesActive"><circle cx="47" cy="52" r="3.6" fill="#FF5F57"/><circle cx="58" cy="52" r="3.6" fill="#FEBC2E"/><circle cx="69" cy="52" r="3.6" fill="#28C840"/></g><rect x="40" y="72" width="74" height="26" rx="5" fill="#FFD52E" fill-opacity=".55"/><text x="46" y="83" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="600" fill="#1D1D1F" text-anchor="start" xml:space="preserve">Lisbon trip</text><text x="46" y="93" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6" font-weight="400" fill="#6E6E73" text-anchor="start" xml:space="preserve">Thursday evening…</text><text x="46" y="113" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="600" fill="#1D1D1F" text-anchor="start" xml:space="preserve">Groceries</text><text x="46" y="123" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6" font-weight="400" fill="#6E6E73" text-anchor="start" xml:space="preserve">Oat milk, lemons</text><text x="46" y="143" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="600" fill="#1D1D1F" text-anchor="start" xml:space="preserve">Reach ideas</text><text x="46" y="153" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6" font-weight="400" fill="#6E6E73" text-anchor="start" xml:space="preserve">Pinch to zoom</text><text x="134" y="86" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#1D1D1F" text-anchor="start" xml:space="preserve">Lisbon trip</text><text x="134" y="106" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">Thursday evening train, back Sunday.</text><text x="134" y="132" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">• Book the 18:40 from Santa Apolónia</text><text x="134" y="145" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">• Pastéis de nata in Belém</text><text x="134" y="158" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">• Sunset at Miradouro da Graça</text><text x="134" y="171" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">• Tram 28 early, before the crowds</text><text x="134" y="197" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.2" font-weight="400" fill="#3A3A3C" text-anchor="start" xml:space="preserve">Ask Sam about the tile museum.</text></g>
+<g class="front"><rect x="262" y="116" width="300" height="178" rx="10" fill="#000" filter="url(#win)"/><rect x="262" y="116" width="300" height="178" rx="10" fill="#1E1E1E"/><path d="M262 138v-12a10 10 0 0 1 10-10h280a10 10 0 0 1 10 10v12z" fill="#323234"/><rect x="262" y="116" width="300" height="178" rx="10" fill="none" stroke="#000" stroke-opacity=".18"/><circle cx="275" cy="127" r="3.6" fill="#FF5F57"/><circle cx="286" cy="127" r="3.6" fill="#FEBC2E"/><circle cx="297" cy="127" r="3.6" fill="#28C840"/><text x="412" y="130.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="600" fill="#C7C7CC" text-anchor="middle" xml:space="preserve">reach — -zsh — 80×24</text><text x="274" y="154" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">Last login: Mon Oct 26 09:12 on ttys000</text><text x="274" y="168" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#E6E6E6" text-anchor="start" xml:space="preserve">alex@MacBook-Pro reach % <tspan class="ch0">g</tspan><tspan class="ch1">i</tspan><tspan class="ch2">t</tspan><tspan class="ch3"> </tspan><tspan class="ch4">p</tspan><tspan class="ch5">u</tspan><tspan class="ch6">s</tspan><tspan class="ch7">h</tspan></text><g class="out0"><text x="274" y="182" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">Enumerating objects: 5, done.</text></g><g class="out1"><text x="274" y="196" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">Writing objects: 100% (3/3), done.</text></g><g class="out2"><text x="274" y="210" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">To github.com:Aqu1bp/reach.git</text></g><g class="out3"><text x="274" y="224" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#9A9AA0" text-anchor="start" xml:space="preserve">   4f2a1c9..8be03d1  main -> main</text></g><g class="nextPrompt"><text x="274" y="238" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#E6E6E6" text-anchor="start" xml:space="preserve">alex@MacBook-Pro reach % <tspan class="caret">█</tspan></text></g></g>
+<rect x="179.0" y="320" width="218" height="34" rx="11" fill="#fff" fill-opacity=".22" stroke="#fff" stroke-opacity=".38" stroke-width=".6"/><path d="M190.0 320.6h196" stroke="#fff" stroke-opacity=".55" stroke-width=".6"/>
+<rect x="186.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="186.0" y="324" width="24" height="24" rx="6" fill="url(#i-files)"/><path d="M191.0 332h5l2 2h7v8H191.0z" fill="#fff" fill-opacity=".92"/><rect x="186.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="186.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<circle cx="198.0" cy="351.5" r="1.1" fill="#fff" fill-opacity=".85"/>
+<rect x="216.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="216.0" y="324" width="24" height="24" rx="6" fill="url(#i-web)"/><circle cx="228.0" cy="336" r="7" fill="none" stroke="#fff" stroke-width="1.4"/><ellipse cx="228.0" cy="336" rx="3" ry="7" fill="none" stroke="#fff" stroke-width="1.1"/><path d="M221.0 336h14" stroke="#fff" stroke-width="1.1"/><rect x="216.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="216.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<rect x="246.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="246.0" y="324" width="24" height="24" rx="6" fill="url(#i-notes)"/><path d="M246.0 331v-1a6 6 0 0 1 6-6h12a6 6 0 0 1 6 6v1z" fill="#FFD52E"/><path d="M251.0 335h14" stroke="#C9C9CE" stroke-width="1"/><path d="M251.0 339h14" stroke="#C9C9CE" stroke-width="1"/><path d="M251.0 343h14" stroke="#C9C9CE" stroke-width="1"/><rect x="246.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="246.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<circle cx="258.0" cy="351.5" r="1.1" fill="#fff" fill-opacity=".85"/>
+<rect x="276.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="276.0" y="324" width="24" height="24" rx="6" fill="url(#i-term)"/><path d="M282.0 332l4 3.5-4 3.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M288.0 340h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><rect x="276.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="276.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<circle cx="288.0" cy="351.5" r="1.1" fill="#fff" fill-opacity=".85"/>
+<rect x="306.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="306.0" y="324" width="24" height="24" rx="6" fill="url(#i-chat)"/><ellipse cx="318.0" cy="335.5" rx="7" ry="5.6" fill="#fff"/><path d="M313.0 339l-1.5 3.6 4.4-2.2z" fill="#fff"/><rect x="306.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="306.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<rect x="336.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="336.0" y="324" width="24" height="24" rx="6" fill="url(#i-music)"/><path d="M346.0 340.5V331.5l7-1.6v9" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><ellipse cx="344.4" cy="340.6" rx="2.2" ry="1.8" fill="#fff"/><ellipse cx="351.4" cy="339" rx="2.2" ry="1.8" fill="#fff"/><rect x="336.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="336.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<rect x="366.0" y="325.2" width="24" height="24" rx="6" fill="#000" fill-opacity=".22"/><rect x="366.0" y="324" width="24" height="24" rx="6" fill="url(#i-gear)"/><circle cx="378.0" cy="336" r="6.5" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="2.2 1.9"/><circle cx="378.0" cy="336" r="4.6" fill="none" stroke="#fff" stroke-width="1.4"/><rect x="366.0" y="324" width="24" height="24" rx="6" fill="url(#gloss)"/><rect x="366.3" y="324.3" width="23.4" height="23.4" rx="5.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width=".6"/>
+<g class="pointer"><g class="finger"><circle r="20" fill="#000" fill-opacity=".25" filter="url(#touch)"/><circle r="20" fill="#fff" fill-opacity=".55"/><circle r="20" fill="none" stroke="#fff" stroke-width="2.5"/></g><circle r="20" fill="none" stroke="#fff" stroke-width="3" class="ripple"/><g transform="scale(.82)" filter="url(#cursor)"><path d="M0 0V17l4.3-4.1 3.1 7.2 3.2-1.4-3.1-7H13.6Z" fill="#000" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></g></g></g>
+<g class="dock">
+<rect x="326" y="22" width="34" height="128" rx="17" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".22" stroke-width=".8"/>
+<g class="kbActive"><circle cx="343" cy="38" r="11" fill="#4D95FF" fill-opacity=".25"/></g>
+<rect x="336" y="33.5" width="14" height="9" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/><rect x="338.0" y="35.6" width="1.4" height="1.4" fill="#fff"/><rect x="340.6" y="35.6" width="1.4" height="1.4" fill="#fff"/><rect x="343.2" y="35.6" width="1.4" height="1.4" fill="#fff"/><rect x="345.8" y="35.6" width="1.4" height="1.4" fill="#fff"/><rect x="348.4" y="35.6" width="1.4" height="1.4" fill="#fff"/><rect x="339.5" y="39.4" width="7" height="1.3" rx=".6" fill="#fff"/><g class="kbActive"><rect x="336" y="33.5" width="14" height="9" rx="2" fill="none" stroke="#4D95FF" stroke-width="1.3"/><rect x="338.0" y="35.6" width="1.4" height="1.4" fill="#4D95FF"/><rect x="340.6" y="35.6" width="1.4" height="1.4" fill="#4D95FF"/><rect x="343.2" y="35.6" width="1.4" height="1.4" fill="#4D95FF"/><rect x="345.8" y="35.6" width="1.4" height="1.4" fill="#4D95FF"/><rect x="348.4" y="35.6" width="1.4" height="1.4" fill="#4D95FF"/><rect x="339.5" y="39.4" width="7" height="1.3" rx=".6" fill="#4D95FF"/></g>
+<rect x="336" y="57" width="14" height="10" rx="2.2" fill="none" stroke="#fff" stroke-width="1.3"/><path d="M343 67v-3" stroke="#fff" stroke-width="1.1"/>
+<text x="343" y="90.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">⌘</text>
+<rect x="337" y="104" width="5" height="5" rx="1.4" fill="#fff"/><rect x="337" y="111" width="5" height="5" rx="1.4" fill="#fff"/><rect x="344" y="104" width="5" height="5" rx="1.4" fill="#fff"/><rect x="344" y="111" width="5" height="5" rx="1.4" fill="#fff"/>
+<circle cx="338" cy="134" r="1.4" fill="#fff"/><circle cx="343" cy="134" r="1.4" fill="#fff"/><circle cx="348" cy="134" r="1.4" fill="#fff"/>
+</g>
+<g transform="translate(343 38)"><g class="finger2"><circle r="10" fill="#fff" fill-opacity=".55"/><circle r="10" fill="none" stroke="#fff" stroke-width="1.3"/></g><circle r="9" fill="none" stroke="#fff" stroke-width="1.4" class="ripple2"/></g>
+<g class="keyboard">
+<rect y="68" width="380" height="104" fill="#2B2B2E"/>
+<rect y="68" width="380" height="17" fill="#38383B"/>
+<rect x="34" y="71" width="22" height="11" rx="3" fill="#5A5A5E"/><text x="45" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">esc</text>
+<rect x="59" y="71" width="22" height="11" rx="3" fill="#5A5A5E"/><text x="70" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">⇥</text>
+<rect x="84" y="71" width="22" height="11" rx="3" fill="#5A5A5E"/><text x="95" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">⌃</text>
+<rect x="109" y="71" width="22" height="11" rx="3" fill="#5A5A5E"/><text x="120" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">⌥</text>
+<rect x="134" y="71" width="22" height="11" rx="3" fill="#5A5A5E"/><text x="145" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">⌘</text>
+<rect x="159" y="71" width="22" height="11" rx="3" fill="#5A5A5E"/><text x="170" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">⇧</text>
+<rect x="189" y="71" width="16" height="11" rx="3" fill="#5A5A5E"/><text x="197" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">◀</text>
+<rect x="208" y="71" width="16" height="11" rx="3" fill="#5A5A5E"/><text x="216" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">▲</text>
+<rect x="227" y="71" width="16" height="11" rx="3" fill="#5A5A5E"/><text x="235" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">▼</text>
+<rect x="246" y="71" width="16" height="11" rx="3" fill="#5A5A5E"/><text x="254" y="79.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="6.4" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">▶</text>
+<path d="M320 74h10v6h-10z" fill="none" stroke="#fff" stroke-width=".9"/><path d="M323 81.5l2 1.6 2-1.6" fill="none" stroke="#fff" stroke-width=".9"/>
+<rect x="30.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><text x="44.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">q</text>
+<rect x="62.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><text x="76.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">w</text>
+<rect x="94.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><text x="108.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">e</text>
+<rect x="126.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><text x="140.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">r</text>
+<rect x="158.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><g class="key2"><rect x="158.0" y="89" width="29" height="17" rx="4" fill="#B4B4BA"/></g><text x="172.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">t</text>
+<rect x="190.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><text x="204.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">y</text>
+<rect x="222.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><g class="key5"><rect x="222.0" y="89" width="29" height="17" rx="4" fill="#B4B4BA"/></g><text x="236.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">u</text>
+<rect x="254.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><g class="key1"><rect x="254.0" y="89" width="29" height="17" rx="4" fill="#B4B4BA"/></g><text x="268.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">i</text>
+<rect x="286.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><text x="300.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">o</text>
+<rect x="318.0" y="89" width="29" height="17" rx="4" fill="#68686C"/><g class="key4"><rect x="318.0" y="89" width="29" height="17" rx="4" fill="#B4B4BA"/></g><text x="332.5" y="100.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">p</text>
+<rect x="46.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><text x="60.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">a</text>
+<rect x="78.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><g class="key6"><rect x="78.0" y="110" width="29" height="17" rx="4" fill="#B4B4BA"/></g><text x="92.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">s</text>
+<rect x="110.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><text x="124.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">d</text>
+<rect x="142.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><text x="156.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">f</text>
+<rect x="174.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><g class="key0"><rect x="174.0" y="110" width="29" height="17" rx="4" fill="#B4B4BA"/></g><text x="188.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">g</text>
+<rect x="206.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><g class="key7"><rect x="206.0" y="110" width="29" height="17" rx="4" fill="#B4B4BA"/></g><text x="220.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">h</text>
+<rect x="238.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><text x="252.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">j</text>
+<rect x="270.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><text x="284.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">k</text>
+<rect x="302.0" y="110" width="29" height="17" rx="4" fill="#68686C"/><text x="316.5" y="121.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">l</text>
+<rect x="30" y="131" width="40" height="17" rx="4" fill="#46464A"/><text x="50" y="142.65" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">⇧</text>
+<rect x="307" y="131" width="40" height="17" rx="4" fill="#46464A"/><text x="327" y="142.65" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">⌫</text>
+<rect x="78.0" y="131" width="29" height="17" rx="4" fill="#68686C"/><text x="92.5" y="142.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">z</text>
+<rect x="110.0" y="131" width="29" height="17" rx="4" fill="#68686C"/><text x="124.5" y="142.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">x</text>
+<rect x="142.0" y="131" width="29" height="17" rx="4" fill="#68686C"/><text x="156.5" y="142.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">c</text>
+<rect x="174.0" y="131" width="29" height="17" rx="4" fill="#68686C"/><text x="188.5" y="142.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">v</text>
+<rect x="206.0" y="131" width="29" height="17" rx="4" fill="#68686C"/><text x="220.5" y="142.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">b</text>
+<rect x="238.0" y="131" width="29" height="17" rx="4" fill="#68686C"/><text x="252.5" y="142.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">n</text>
+<rect x="270.0" y="131" width="29" height="17" rx="4" fill="#68686C"/><text x="284.5" y="142.475" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">m</text>
+<rect x="30" y="152" width="40" height="17" rx="4" fill="#46464A"/><text x="50" y="163.125" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">123</text>
+<rect x="73" y="152" width="29" height="17" rx="4" fill="#46464A"/><text x="87.5" y="163.3" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">☺</text>
+<rect x="105" y="152" width="167" height="17" rx="4" fill="#68686C"/><g class="key3"><rect x="105" y="152" width="167" height="17" rx="4" fill="#B4B4BA"/></g><text x="188.5" y="163.125" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">space</text>
+<rect x="275" y="152" width="72" height="17" rx="4" fill="#46464A"/><g class="keyReturn"><rect x="275" y="152" width="72" height="17" rx="4" fill="#B4B4BA"/></g><text x="311" y="163.125" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="7.5" font-weight="400" fill="#fff" text-anchor="middle" xml:space="preserve">return</text>
+</g></g>
+    <rect x="546" y="310" width="380" height="172" fill="url(#glare)"/></g>
+  <rect x="553" y="375.0" width="12" height="42" rx="6" fill="#000"/>
+</svg>
